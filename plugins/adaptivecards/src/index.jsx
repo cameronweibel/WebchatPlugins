@@ -11,6 +11,7 @@ const AdaptiveCards = (props) => {
     }, []);
 
     const cardPayload = message.data._plugin.payload;
+    const altText = message.data._plugin.altText;
 
     const card = React.useMemo(() => {
         const onActionSubmit = (params) => {
@@ -23,6 +24,8 @@ const AdaptiveCards = (props) => {
 
         return (
             <AdaptiveCard
+                role="img"
+                aria-label={altText}
                 payload={cardPayload}
                 onActionSubmit={onActionSubmit}
                 hostConfig={hostConfig}
