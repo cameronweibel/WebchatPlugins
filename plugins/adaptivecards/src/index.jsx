@@ -24,11 +24,10 @@ const AdaptiveCards = (props) => {
 
         return (
             <AdaptiveCard
-                role="img"
-                aria-label={altText}
                 payload={cardPayload}
                 onActionSubmit={onActionSubmit}
                 hostConfig={hostConfig}
+                altText={altText}
             />
         );
     }, [cardPayload]);
