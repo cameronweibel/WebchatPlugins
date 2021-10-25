@@ -1,0 +1,13 @@
+diff --git a/node_modules/react-adaptivecards/dist/index.js b/node_modules/react-adaptivecards/dist/index.js
+index c778861..1b8a335 100644
+--- a/node_modules/react-adaptivecards/dist/index.js
++++ b/node_modules/react-adaptivecards/dist/index.js
+@@ -121,7 +121,7 @@ var AdaptiveCard = function (_React$Component) {
+       try {
+         this.adaptiveCard.parse(this.props.payload);
+         var result = this.adaptiveCard.render();
+-        return _react2.default.createElement('div', { style: this.props.style, ref: function ref(n) {
++        return _react2.default.createElement('div', { style: this.props.style, role: 'img', 'aria-label': this.props.altText, ref: function ref(n) {
+             n && n.appendChild(result);
+           } });
+       } catch (err) {
